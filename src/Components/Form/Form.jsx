@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./Form.css";
 
 
 const Form = () => {
@@ -48,9 +49,10 @@ const Form = () => {
     const isValid = validate(newUser);
 
     if (!isValid) {
+      
       return;
     }
-    alert(`Gracias ${newUser.nombre}, te contactaremos cuando antes vía mail`);
+    alert(`Gracias ${newUser.nombre}, te contactaremos cuanto antes vía mail`);
   };
 
   return (
@@ -63,7 +65,7 @@ const Form = () => {
           type="text"
           onChange={handleInputChange}
         />
-        {errors.nombreError && <label> 🔔 {errors.nombreError}</label>}
+        {errors.nombreError && <label className="text-danger"> 🔔 {errors.nombreError}</label>}
         <input
           placeholder='Ingresa tu correo'
           className={errors.emailError ? "inputError" : ""}
@@ -71,7 +73,7 @@ const Form = () => {
           type="email"
           onChange={handleInputChange}
         />
-        {errors.emailError && <label> 🔔 {errors.emailError}</label>}
+        {errors.emailError && <label className="text-danger"> 🔔 {errors.emailError}</label>}
         <button onClick={handleSubmit}>Enviar</button>
       </form>
     </div>

@@ -1,8 +1,9 @@
-import React from 'react';
-import { useContextGlobal } from "./utils/global.context";
-import { Link } from "react-router-dom";
-import { links } from "./utils/links";
-import ButtonTheme from "./ButtonTheme/ButtonTheme";
+import React from "react";
+import { useContextGlobal } from "../utils/global.context";
+import "./Navbar.css";
+import { Link, NavLink} from "react-router-dom";
+import { links } from "../utils/links";
+import ButtonTheme from "../ButtonTheme/ButtonTheme";
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Navbar = () => {
@@ -15,18 +16,18 @@ const Navbar = () => {
   };
 
   return (
-    <nav>
+    <nav className={`${theme.color} ${theme.color !== "light" ? 'nav-dark' : ''}`}>
       <h2>DH Odonto</h2>
-      <div>
+      <div className="">
         {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
-        <Link to={home.path}>{home.name}</Link>
-        <Link to={contact.path}>{contact.name}</Link>
-        <Link to={favs.path}>{favs.name}</Link>
+        <NavLink to={home.path} activeClassName="active">{home.name}</NavLink>
+        <NavLink to={contact.path} activeClassName="active">{contact.name}</NavLink>
+        <NavLink to={favs.path} activeClassName="active">{favs.name}</NavLink>
         {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
         <ButtonTheme onClick={handleTheme} />
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

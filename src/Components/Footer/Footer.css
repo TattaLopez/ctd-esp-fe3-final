@@ -1,0 +1,57 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    bottom: 0;
+    height: 40px;
+    background-color: #dcdcde;
+  }
+  
+  footer > div{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  footer > div > img{
+    width: 200px;
+    margin: 0;
+  }
+  
+  footer > div > ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  footer > div > ul > li{
+    margin-left: 10px;
+  }
+  
+  footer > div > ul > li > img{
+    width: 20px;
+    margin: 0;
+    filter: invert(100%);
+  }
+  
+  
+  footer > p{
+    margin: 0;
+    padding-top: 0.7rem;
+  }
+
+  .footer-dark{
+    background-color: rgb(0, 0, 0);
+  }
+
+  .footer-dark > div > img{
+    filter: invert(100%)
+  }
+
+  .footer-dark > div > ul > li > img{
+    filter: invert(0%)
+  }

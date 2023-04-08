@@ -1,0 +1,113 @@
+.card{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+  
+  .favorite{
+    color: rgb(226,5,30);   
+    transition: color 0.2s ease-in-out;
+  }
+
+
+  
+  .material-symbols-rounded {
+    font-variation-settings:
+    'FILL' 100,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
+  
+  .card{
+    background-color: #faf8f8;
+  }
+  
+  .card:hover{
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+  
+  .card-grid{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 90vw;
+    height: auto;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  
+  .card img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 15px;
+  }
+
+  .favButton{
+    background-color: rgba(136, 136, 136, 0.116);
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .favButton:hover{
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    transition-duration: 0.3s;
+  }
+
+  [data-tooltip] {
+    position: relative;
+    
+   }
+   [data-tooltip]:before,
+   ::after {
+      opacity: 0;
+ 
+      margin-top: -0.5em;
+    }
+    
+    [data-tooltip]::before {
+      content: attr(data-tooltip);
+      display: block;
+      position: absolute;
+      top: 150%;
+      left: 50%;
+      margin-left: -4.75em;
+      width: 8em;
+      text-align: center;
+      border-radius: 4px;
+      background: black;
+      color: white;
+      font-size: 0.8em;
+      line-height: 1.1;
+      padding: 0.75em 0.95em;
+    }
+    
+    [data-tooltip]::after {
+      content: "";
+      border: 10px solid transparent;
+      border-top-color: black;
+      position: absolute;
+      top: 52px;
+      left: 50%;
+      margin-left: -10px;
+      transform: rotate(-180deg);
+    }
+    
+  
+    
+    [data-tooltip]:hover::before,
+    [data-tooltip]:hover::after {
+      opacity: 1;
+ 
+    }
+  

@@ -4,15 +4,15 @@ export const links = {
       path: "/",
     },
     dentist: {
-      name: "Dentist",
+      name: "Dentista",
       path: "/detail",
     },
     contact: {
-      name: "Contact",
+      name: "Contacto",
       path: "/contact",
     },
     favs: {
-      name: "Favorites",
+      name: "Favoritos",
       path: "/favs",
     },
   };
